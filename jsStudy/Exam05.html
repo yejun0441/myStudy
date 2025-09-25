@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam05</title>
+  </head>
+  <body>
+    <h1>5. js study</h1>
+    <p>prompt로 2개를 입력받고 숫자1 ~ 숫자2 까지 구구단 출력하기</p>
+    <script>
+      let num1 = prompt("숫자1을 입력하세요.");
+      let num2 = prompt("숫자2를 입력하세요.");
+      for (let i = 1; i <= 9; i++) {
+        for (let j = num1; j <= num2; j++) {
+          document.write(j + "x" + i + "=" + j * i + "&nbsp;&nbsp;"); // &nbsp; : 공백
+        }
+        document.write("<br>");
+      }
+    </script>
+  </body>
+</html>
