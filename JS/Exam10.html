@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam10</title>
+  </head>
+  <body>
+    <h1>10. js study</h1>
+    <p>var, let, const 에 대해 알아보기</p>
+    <script>
+      // var : 함수레벨 스코프, 중복선언 가능, 재할당 가능
+      var a = 10;
+      console.log(a); // 10
+      {
+        var a = 20; // 중복선언
+        console.log(a); // 20
+      }
+      console.log(a); // 20
+
+      // let : 블록레벨 스코프, 중복선언 불가능, 재할당 가능
+      let b = 10;
+      console.log(b); // 10
+      {
+        let b = 20; // 블록레벨 스코프
+        console.log(b); // 20
+      }
+      console.log(b); // 10
+
+      // const : 블록레벨 스코프, 중복선언 불가능, 재할당 불가능
+      const c = 10;
+      console.log(c); // 10
+      {
+        const c = 20; // 블록레벨 스코프
+        console.log(c); // 20
+      }
+      console.log(c); // 10
+      // c = 20; // 재할당 불가능
+    </script>
+  </body>
+</html>

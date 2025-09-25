@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam06</title>
+  </head>
+  <body>
+    <h1>6. js study</h1>
+    <p>함수 선언과 즉시실행 함수에 대해 알아보기</p>
+    <script>
+      // 함수 선언
+      function add(x, y) {
+        return x + y;
+      }
+      let result = add(10, 20);
+      console.log(result); // 30
+
+      // 익명 함수
+      let multiply = function (x, y) {
+        return x * y;
+      };
+      let result2 = multiply(10, 20);
+      console.log(result2); // 200
+
+      // 즉시 실행 함수
+      (function (x, y) {
+        let result3 = x - y;
+        console.log(result3); // -10
+      })(10, 20);
+      // 즉시 실행 함수 간편화 하기
+      ((x, y) => {
+        let result4 = x / y;
+        console.log(result4); // 0.5
+      })(10, 20);
+    </script>
+  </body>
+</html>

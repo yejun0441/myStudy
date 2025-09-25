@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam07</title>
+  </head>
+  <body>
+    <h1>7. js study</h1>
+    <p>DOM 요소 불러오고 직접 메시지 넣어보기</p>
+    <h2 id="title">js로 바꿀 제목입니다.</h2>
+    <h3 class="sub-title">js로 바꿀 부제목입니다.</h3>
+    <div class="item">js로 바꿀 내용입니다.</div>
+    <div class="item">js로 바꿀 내용입니다.</div>
+    <div class="item">js로 바꿀 내용입니다.</div>
+    <p>js로 바꿀 단락입니다.</p>
+    <p>js로 바꿀 단락입니다.</p>
+    <p>js로 바꿀 단락입니다.</p>
+    <script>
+      // id로 요소 불러오기
+      let title = document.getElementById("title");
+      title.innerText = "js로 바꾼 제목입니다.";
+
+      // class로 요소 불러오기
+      let items = document.getElementsByClassName("item");
+      for (let i = 0; i < items.length; i++) {
+        items[i].innerText = "js로 바꾼 내용입니다." + (i + 1);
+      }
+
+      // tag로 요소 불러오기
+      let ps = document.getElementsByTagName("p");
+      for (let i = 0; i < ps.length; i++) {
+        ps[i].innerText = "js로 바꾼 단락입니다." + (i + 1);
+      }
+      // querySelector로 요소 불러오기
+      let subTitle = document.querySelector(".sub-title");
+      subTitle.innerText = "js로 바꾼 부제목입니다.";
+      let firstItem = document.querySelector(".item");
+      firstItem.innerText = "js로 바꾼 첫번째 내용입니다.";
+      let allItems = document.querySelectorAll(".item");
+      allItems[1].innerText = "js로 바꾼 두번째 내용입니다.";
+    </script>
+  </body>
+</html>

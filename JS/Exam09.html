@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam09</title>
+  </head>
+  <body>
+    <h1>9. js study</h1>
+    <p>버튼 클릭시 input에서 이름을 불러온 다음 화면에 출력하기</p>
+    이름 : <input type="text" id="name" />
+    <button id="btn">확인</button>
+    <h3 id="greet"></h3>
+    <script>
+      let btn = document.getElementById("btn");
+      btn.addEventListener("click", function () {
+        let name = document.getElementById("name").value;
+        let greet = document.getElementById("greet");
+        greet.innerText = name + "님 환영합니다.";
+      });
+    </script>
+  </body>
+</html>
