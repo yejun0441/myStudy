@@ -7,26 +7,16 @@
   </head>
   <body>
     <h1>8. js study</h1>
-    <p>button을 불어온 뒤 addeventlistener로 클릭 이벤트 추가하기</p>
-    <button id="btn1">버튼1</button>
-    <button id="btn2">버튼2</button>
-    <button id="btn3">버튼3</button>
+    <p>버튼 클릭시 input에서 이름을 불러온 다음 화면에 출력하기</p>
+    이름 : <input type="text" id="name" />
+    <button id="btn">확인</button>
+    <h3 id="greet"></h3>
     <script>
-      // alert로 버튼 클릭시 알림창 띄우기
-      let btn1 = document.getElementById("btn1");
-      btn1.addEventListener("click", function () {
-        alert("버튼1이 클릭되었습니다.");
-      });
-      // 버튼 클릭시 배경색 바꾸기
-      let btn2 = document.getElementById("btn2");
-      btn2.addEventListener("click", function () {
-        document.body.style.backgroundColor = "yellow";
-      });
-      // 버튼 클릭시 prompt로 이름 입력받고 alert로 환영메시지 띄우기
-      let btn3 = document.getElementById("btn3");
-      btn3.addEventListener("click", function () {
-        let name = prompt("이름을 입력하세요.");
-        alert(name + "님 환영합니다.");
+      let btn = document.getElementById("btn");
+      btn.addEventListener("click", function () {
+        let name = document.getElementById("name").value;
+        let greet = document.getElementById("greet");
+        greet.innerText = name + "님 환영합니다.";
       });
     </script>
   </body>

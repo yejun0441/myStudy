@@ -7,16 +7,26 @@
   </head>
   <body>
     <h1>9. js study</h1>
-    <p>버튼 클릭시 input에서 이름을 불러온 다음 화면에 출력하기</p>
-    이름 : <input type="text" id="name" />
-    <button id="btn">확인</button>
-    <h3 id="greet"></h3>
+    <p>버튼 클릭시 배열에 저장된 색갈이 배경색에 돌아가며 적용되게 하기</p>
+    <button id="btn">배경색 변경</button>
     <script>
+      let colors = [
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "navy",
+        "purple",
+      ];
+      let i = 0;
       let btn = document.getElementById("btn");
-      btn.addEventListener("click", function () {
-        let name = document.getElementById("name").value;
-        let greet = document.getElementById("greet");
-        greet.innerText = name + "님 환영합니다.";
+      btn.addEventListener("click", () => {
+        document.body.style.backgroundColor = colors[i];
+        i++;
+        if (i === colors.length) {
+          i = 0;
+        }
       });
     </script>
   </body>
